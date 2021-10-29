@@ -17,7 +17,7 @@ pipeline{
     }
     stage('Apply'){
       steps{
-        sh 'terraform apply --auto-approve -var="access-key=$ACCESS_KEY" -var="secret-key=$SECRET_KEY" -var="owner-id=$OWNER_ID" -var="region=$AWS_REGION"'
+        sh 'terraform apply --auto-approve -var="access_key=$ACCESS_KEY" -var="secret_key=$SECRET_KEY" -var="owner_id=$OWNER_ID" -var="region=$AWS_REGION"'
       }
     }
     stage('Outputs'){

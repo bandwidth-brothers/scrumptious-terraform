@@ -7,21 +7,21 @@ output "vpc_arn"{
 }
 
 output "subnet_ids"{
-  value = aws_subnet.subnets.*.id
+  value = aws_subnet.subnet.*.id
 }
 
 output "subnet_arns"{
-  value = aws_subnet.subnets.*.arn
+  value = aws_subnet.subnet.*.arn
 }
 
 output "subnet_public"{
-  value = aws_subnet.subnets.*.map_public_ip_on_launch
+  value = aws_subnet.subnet.*.map_public_ip_on_launch
 }
 
 output "subnet_zones"{
-  value = aws_subnet.subnets.*.availability_zone
+  value = aws_subnet.subnet.*.availability_zone
 }
 
 output "subnet_cidrs"{
-  value = aws_subnet.subnets.*.cidr_block
+  value = aws_subnet.subnet.*.cidr_block
 }

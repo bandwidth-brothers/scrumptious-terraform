@@ -10,4 +10,4 @@ resource "aws_subnet" "subnet"{
     map_public_ip_on_launch = count.index < 2
 }
 
-data "aws_availability_zones" "available"{}
+data "aws_availability_zones" "zones"{}

@@ -27,7 +27,7 @@ pipeline{
     }
     stage('Destroy'){
       steps{
-        sh 'terraform destroy'
+        sh 'terraform destroy --auto-approve -var="access_key=$ACCESS_KEY" -var="secret_key=$SECRET_KEY" -var="owner_id=$OWNER_ID" -var="region=$AWS_REGION"'
       }
     }
   }

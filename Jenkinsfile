@@ -23,7 +23,8 @@ pipeline{
     }
     stage('Outputs'){
       steps{
-        sh 'terraform output'
+        sh 'VPC=`terraform output vpc-id`'
+        sh 'aws secretmanager update-secret --secret-id vpc-id --secret-string $VPC'
       }
     }
     stage('Destroy'){
